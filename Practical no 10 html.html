@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iframe Layout Demo</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        .main {
+            display: flex;
+            height: 90vh;
+        }
+        .sidebar {
+            width: 25%;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ddd;
+            text-decoration: none;
+            color: black;
+            border-radius: 5px;
+        }
+        .sidebar a:hover {
+            background-color: #bbb;
+        }
+        .content {
+            width: 75%;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Iframe Navigation Layout</h1>
+        <p>Modern replacement for old HTML frames</p>
+    </div>
+
+    <div class="main">
+
+        <!-- Navigation Panel -->
+        <div class="sidebar">
+            <h3>Menu</h3>
+            
+            <a href="https://www.example.com" target="contentFrame">
+                Open Example Website
+            </a>
+
+            <a href="https://www.wikipedia.org" target="contentFrame">
+                Open Wikipedia
+            </a>
+
+            <a href="https://www.google.com/maps?q=Mumbai&output=embed" target="contentFrame">
+                View Map (Mumbai)
+            </a>
+
+            <a href="https://www.google.com/maps?q=Delhi&output=embed" target="contentFrame">
+                View Map (Delhi)
+            </a>
+
+        </div>
+
+        <!-- Content Display Area -->
+        <div class="content">
+            <iframe name="contentFrame" title="Content Display Area">
+                Your browser does not support iframes.
+            </iframe>
+        </div>
+
+    </div>
+
+</body>
+</html>
